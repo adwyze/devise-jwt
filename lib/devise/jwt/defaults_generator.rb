@@ -44,8 +44,8 @@ module Devise
       # :reek:FeatureEnvy
       def add_mapping(inspector)
         scope = inspector.scope
-        model = inspector.model
-        defaults[:mappings][scope] = model.name
+        model_name = inspector.class_name
+        defaults[:mappings][scope] = model_name
       end
 
       # :reek:FeatureEnvy

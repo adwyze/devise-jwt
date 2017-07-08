@@ -27,7 +27,10 @@ module Devise
         mapping.to
       end
 
-      # :reek:FeatureEnvy
+      def class_name
+        mapping.class_name
+      end
+
       def path(name)
         prefix, scope, request = path_parts(name)
         [prefix, scope, request].delete_if do |item|
